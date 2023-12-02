@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    padding: 30px 0px;
+    overflow: hidden;
+}
+header>h1{
+    float: left;
+}
+
+header>ul{
+    float : right;
+    display: flex;
+}
+
+header>ul a{
+    display: bloc;
+    padding: 0 30px;
+    font-size: 20px;
+}
+.title{
+    text-align: center;
+    padding: 40px 0;
+    color: #333;
+    font-size: 24px;
+}
+
+/*상품 리스트*/
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid .product{
+    width: 300px;
+    text-align: center;
+}
+
+.grid .product .image{
+    width: 100%;
+    height: 300px;
+}
+
+.grid .product .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid .product .product-info{
+    text-align: center;
+}
+
+.grid .product .product-info .product-name{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+/* 상품 디테일 */
+.product-detail{
+    padding-top: 40px;
+    display: flex;
+}
+
+.product-detail>div{
+    flex: 1;
+}
+.product-detail .image img{
+    width: 100%;
+    object-fit: cover;
+}
+.product-detail .product-info h2{
+    padding-bottom: 20px;
+}
+
+/* 회사정보 */
+.company{
+    display: flex;
+    gap: 10px;
+}
+
+.company>div{
+    flex: 1;
+}
+
+/* 홈 */
+.intro{
+    position: relative;
+}
+.intro .image{
+    height: 400px;
+    position: relative;
+}
+
+.intro .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro .image::before{
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.intro .intro-desc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro .intro-desc h1{
+    color: #fff;
+    text-transform: uppercase;
+}

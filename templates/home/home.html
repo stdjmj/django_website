@@ -1,0 +1,33 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+    <header>
+        <h1><a href="/">문구회사</a></h1>
+        <ul>
+            <li><a href="/company">회사소개</a></li>
+            <li><a href="/product">상품소개</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="intro">
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_1280.jpg"/>
+            </div>
+
+            <div class="intro-desc">
+                <h1>make pen</h1>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
