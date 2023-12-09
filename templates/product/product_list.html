@@ -10,34 +10,30 @@
     <link rel="stylesheet" href="{% static 'style.css'%}">
 </head>
 <body>
-    <header>
-        <h1><a href="/">문구회사</a></h1>
-        <ul>
-            <li><a href="/company">회사소개</a></li>
-            <li><a href="/product">상품소개</a></li>
-        </ul>
-    </header>
-    {% if product_list %}
+    {% include "header.html" %}
+
         <main>
-            <h1 class="title">상품</h1>
-            <div class="grid">
-
-                {% for product in product_list %}
-                    <div class="product">
-                        <div class="image">
-                            <img src="media/{{product.img}}"/>
-                        </div>
-
-                        <div class="product-info">
-                            <div class="product-name">{{product.name}}</div>
-                            <a href="detail/{{product.id}}">보러가기</a>
-                        </div>
-                    </div>
-                {% endfor%}
+            <div class="container">
+                <h1 class="title">상품</h1>
+                {% if product_list %}
+                <div class="grid">
+                    {% for product in product_list %}
+                        <a href="{% url 'detail' product.id%}">
+                            <div class="image-wrap">
+                                <img src="media/{{product.img}}"/>
+                            </div>
+                            <div class="product-info">
+                                <span class="name">{{product.name}}</span>
+                                <span class="price">가격: 1000원</span>
+                            </div>
+                        </a>
+                    {% endfor%}
+                </div>
+                {% else %}
+                    <p>상품이 존재하지 않습니다.</p>
+                {%endif%}
             </div>
         </main>
-    {% else %}
-        <p>상품이 존재하지 않습니다.</p>
-    {%endif%}
+    {% include "footer.html" %}
 </body>
 </html>

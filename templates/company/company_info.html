@@ -10,24 +10,22 @@
     <link rel="stylesheet" href="{% static 'style.css'%}">
 </head>
 <body>
-    <header>
-        <h1><a href="/">문구회사</a></h1>
-        <ul>
-            <li><a href="/company">회사소개</a></li>
-            <li><a href="/product">상품소개</a></li>
-        </ul>
-    </header>
+    {% include "header.html" %}
 
     <main>
-        <h1 class="title">회사소개</h1>
-        <div class="company">
-            <div class="image">
-                <img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/7Nj8/image/LkMCT0sdoAU44RJYQ5VZQlT5lFc.jpg"/>
-            </div>
-            <div class="company-info">
-                <p>저희 회사는 각종 펜, 노트 등 학용품을 만드는 회사입니다.</p>
+        <div class="container">
+            <h1 class="title">회사소개</h1>
+            <div class="company">
+                <div class="image">
+                    <img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/7Nj8/image/LkMCT0sdoAU44RJYQ5VZQlT5lFc.jpg"/>
+                </div>
+                <div class="company-info">
+                    <p>저희 회사는 각종 펜, 노트 등 학용품을 만드는 회사입니다.</p>
+                </div>
             </div>
         </div>
     </main>
+
+    {% include "footer.html" %}
 </body>
 </html>

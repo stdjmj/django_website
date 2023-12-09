@@ -12,29 +12,31 @@ a{
     text-decoration: none;
 }
 
-body{
+
+.container{
     width: 1200px;
     margin: 0 auto;
 }
 
 header{
-    padding: 30px 0px;
-    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
-header>h1{
-    float: left;
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header>ul{
-    float : right;
+header ul{
     display: flex;
 }
 
-header>ul a{
-    display: bloc;
-    padding: 0 30px;
-    font-size: 20px;
+header a{
+    display: block;
+    padding: 10px 15px;
 }
+
 .title{
     text-align: center;
     padding: 40px 0;
@@ -47,32 +49,36 @@ header>ul a{
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
 }
 
-.grid .product{
-    width: 300px;
-    text-align: center;
+.grid>a{
+    display: flex;
+    flex-direction: column;
 }
 
-.grid .product .image{
+.grid .image-wrap{
     width: 100%;
     height: 300px;
+    position: relative;
 }
 
-.grid .product .image img{
+.grid img{
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.grid .product .product-info{
-    text-align: center;
+.grid .product-info{
+    display: flex;
+    flex-direction: column;
 }
 
-.grid .product .product-info .product-name{
+.grid .product-info .name{
+    font-size: 18px;
     font-weight: bold;
-    font-size: 20px;
-    padding: 10px 0;
+    margin: 10px 0;
 }
 
 /* 상품 디테일 */
@@ -138,4 +144,15 @@ header>ul a{
 .intro .intro-desc h1{
     color: #fff;
     text-transform: uppercase;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
 }

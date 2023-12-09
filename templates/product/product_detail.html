@@ -10,26 +10,26 @@
     <link rel="stylesheet" href="{% static 'style.css'%}">
 </head>
 <body>
-    <header>
-        <h1><a href="/">문구회사</a></h1>
-        <ul>
-            <li><a href="/company">회사소개</a></li>
-            <li><a href="/product">상품소개</a></li>
-        </ul>
-    </header>
+    {% include "header.html" %}
 
-    {%if product %}
-        <main class="product-detail">
-            <div class="image">
-                <img src="media/{{product.img}}"/>
-            </div>
-            <div class="product-info">
-                <h2>{{product.name}}</h2>
-                <p>{{product.desc}}</p>
-            </div>
+    <main>
+        <div class="container">
+            {%if product %}
+                <div class="product-detail">
+                    <div class="image">
+                        <img src="media/{{product.img}}"/>
+                    </div>
+                    <div class="product-info">
+                        <h2>{{product.name}}</h2>
+                        <span>가격: 1000원</span>
+                        <p>{{product.desc}}</p>
+                    </div>
+                </div>
+            {%endif%}
+        </div>
+    </main>
 
-        </main>
 
-    {%endif%}
+    {% include "footer.html" %}
 </body>
 </html>

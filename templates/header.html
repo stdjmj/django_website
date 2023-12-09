@@ -1,0 +1,14 @@
+<header>
+    <div class="container">
+        <h1><a href="/">문구회사</a></h1>
+        <ul>
+            <li><a href="/company">회사소개</a></li>
+            <li><a href="/product">상품소개</a></li>
+            {% if  user.is_authenticated %}
+                <li><a href="{% url 'accounts:logout' %}">로그아웃</a></li>
+            {% else %}
+                <li><a href="{% url 'accounts:login' %}">로그인</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</header>

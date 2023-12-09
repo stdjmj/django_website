@@ -10,13 +10,7 @@
     <link rel="stylesheet" href="{% static 'style.css'%}">
 </head>
 <body>
-    <header>
-        <h1><a href="/">문구회사</a></h1>
-        <ul>
-            <li><a href="/company">회사소개</a></li>
-            <li><a href="/product">상품소개</a></li>
-        </ul>
-    </header>
+    {% include "header.html" %}
 
     <main>
         <div class="intro">
@@ -29,5 +23,7 @@
             </div>
         </div>
     </main>
+
+    {% include "footer.html" %}
 </body>
 </html>
